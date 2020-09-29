@@ -109,8 +109,8 @@ namespace ArrayAndString
         {
             var result = new StringBuilder();
             int countCaractere = 0;
+            int countCaractereEnd = 0;
             var testDic = new HashSet<char>();
-            var currentChar = ' ';
             for ( int i = 0; i < s1.Length; i++)
             {
                 if (testDic.Add(s1[i]))
@@ -122,13 +122,18 @@ namespace ArrayAndString
                 {
                     countCaractere++;
                 };
-                if (s1[i] != ) 
+                if (i == (s1.Length - 1)) i--;
+                if (!testDic.TryGetValue(s1[i+1],out char actualValue)) 
                 {
                     result.Append(countCaractere.ToString());
                     countCaractere = 0;
                 }
-                currentChar = s1[i];
+                if(s1[i] == s1[s1.Length-1]) 
+                {
+                    countCaractereEnd++;
+                }
             }
+            result.Append(countCaractereEnd.ToString());
             return result.ToString();
         }
     }

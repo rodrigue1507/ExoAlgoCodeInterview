@@ -6,7 +6,11 @@ namespace ArrayAndString
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            byte[,] rotation = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 16, 17 } };
+            foreach (var item in rotation)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }

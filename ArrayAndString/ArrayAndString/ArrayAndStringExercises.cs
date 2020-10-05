@@ -122,12 +122,15 @@ namespace ArrayAndString
                 {
                     countCaractere++;
                 };
-                if (i == (s1.Length - 1)) i--;
-                if (!testDic.TryGetValue(s1[i+1],out char actualValue)) 
+                if (i != (s1.Length - 1)) 
                 {
-                    result.Append(countCaractere.ToString());
-                    countCaractere = 0;
-                }
+                    if (!testDic.TryGetValue(s1[i + 1], out char actualValue))
+                    {
+                        result.Append(countCaractere.ToString());
+                        countCaractere = 0;
+                    }
+                };
+
                 if(s1[i] == s1[s1.Length-1]) 
                 {
                     countCaractereEnd++;
@@ -135,6 +138,12 @@ namespace ArrayAndString
             }
             result.Append(countCaractereEnd.ToString());
             return result.ToString();
+        }
+
+        public byte[,] RotateMatrix(byte[,] originMatrix, byte[,] rotateMatrix)
+        {
+
+
         }
     }
 }

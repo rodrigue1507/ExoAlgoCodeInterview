@@ -140,10 +140,16 @@ namespace ArrayAndString
             return result.ToString();
         }
 
-        public byte[,] RotateMatrix(byte[,] originMatrix, byte[,] rotateMatrix)
+        public byte[,] RotateMatrix(byte[,] originMatrix)
         {
 
+        }
 
+        private byte[,] Rotated(byte[,] originMatrix, Tuple<int, int> cord1, Tuple<int, int> cord2, Tuple<int, int> cord3, Tuple<int, int> cord4)
+        {
+            byte[,] result = new byte[4,4];
+            var temp = new Tuple<int, int>(0,0);
+           originMatrix[][];
         }
     }
 }
